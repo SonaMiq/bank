@@ -22,7 +22,6 @@ public class CardController {
    @PostMapping({"/new/{cardHolderID}"})
    @ResponseStatus(HttpStatus.CREATED)
     public void createCard(@PathVariable("cardHolderID")Long CHId,@Valid  @RequestBody Card card){
-
        cardService.createCard(CHId,card);
     }
 
